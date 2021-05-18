@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8082
 let username = "";
 let password = "";
 let eid = "";
-app.get("/", (req, res) => {
+app.post('/', (req, res) => {
     
     username = req.query.username;
     password = req.query.password;
@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
         status: 'ok',
         payload: 'TEST-E-Marketplace' + username + ',' + password + ',' + eid
     })
-})
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running. ${PORT}`);
