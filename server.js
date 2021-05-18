@@ -7,13 +7,7 @@ let password = "";
 let eid = "";
 app.post('/', (req, res) => {
     
-    username = req.query.username;
-    password = req.query.password;
-    eid = req.query.eid;
-    res.json({
-        status: 'ok',
-        payload: 'TEST-E-Marketplace' + username + ',' + password + ',' + eid
-    })
+    return res.send('Received a POST HTTP method');
 });
 
 app.listen(PORT, () => {
