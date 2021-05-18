@@ -1,0 +1,18 @@
+#1. Set engines
+------------------
+"engines": {
+    "node" : "",
+    "npm" : ""
+}
+
+#2. Revise PORT in code
+------------------
+const POST = process.env.PORT || 8082
+
+#3. Heroku cli
+------------------
+sudo yarn global add heroku
+
+#4. Check log
+------------------
+heroku logs --tail --app heroku-node-js-demo
