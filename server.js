@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8082
 let username = "";
 let password = "";
 let eid = "";
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
     
     username = req.query.username;
     password = req.query.password;
