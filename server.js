@@ -2,12 +2,19 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8082
 
-let username = "";
-let password = "";
-let eid = "";
+
 app.post('/', (req, res) => {
-    
-    return res.send('Received a POST HTTP method');
+    let username = req.body.username;
+    let password = req.body.password;
+    let eid = req.body.eid;
+    return res.json({
+        status: 'ok',
+        data: {
+            'username' : username,
+            'password' : password,
+            'eid' : eid
+        }
+    })
 });
 
 app.listen(PORT, () => {
