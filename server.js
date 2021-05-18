@@ -5,7 +5,7 @@ app.use(express.urlencoded({extended: false}));
 const PORT = process.env.PORT || 8082
 
 app.post('/', (req, res) => {
-    console.log("666");
+    console.log(req.body);
     res.json({
         status: 'ok',
     })
