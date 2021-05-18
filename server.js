@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 8082
 
 
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
     let username = req.body.username;
     let password = req.body.password;
     let eid = req.body.eid;
