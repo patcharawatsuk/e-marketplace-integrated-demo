@@ -1,13 +1,15 @@
+const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 
-//app.use(express.urlencoded({extended: false}));
 const PORT = process.env.PORT || 8082
 
+app.use(bodyParser.json());
 app.post('/', (req, res) => {
-    console.log(req.test);
+    console.log(req.body);
     res.json({
         status: 'ok',
+        data : req.body
     })
 })
 
